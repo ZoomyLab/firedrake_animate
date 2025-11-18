@@ -517,7 +517,7 @@ class RiemannianMetric(ffunc.Function):
         if not np.isclose(_a_max, 1.0) and _a_max < 1.0:
             raise ValueError(f"Encountered a_max value smaller than unity: {_a_max}.")
 
-        dim = mesh.()
+        dim = mesh.topological_dimension()
         boundary_tag = self._variable_parameters.get("dm_plex_metric_boundary_tag")
         if boundary_tag is None:
             node_set = self.function_space().node_set
@@ -733,7 +733,7 @@ class RiemannianMetric(ffunc.Function):
         mesh = V_ten.mesh()
         fe = (V_ten.ufl_element().family(), V_ten.ufl_element().degree())
         V_vec = firedrake.VectorFunctionSpace(mesh, *fe)
-        dim = mesh.()
+        dim = mesh.topological_dimension()
         evectors, evalues = firedrake.Function(V_ten), firedrake.Function(V_vec)
         if reorder:
             name = "get_reordered_eigendecomposition"
