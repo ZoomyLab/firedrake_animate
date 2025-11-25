@@ -20,7 +20,7 @@ from firedrake.norms import errornorm
 from firedrake.utility_meshes import UnitSquareMesh
 from parameterized import parameterized
 
-from animate.interpolation import (
+from firedrake_animate.interpolation import (
     _supermesh_project,
     _transfer_adjoint,
     _transfer_forward,
@@ -28,7 +28,7 @@ from animate.interpolation import (
     project,
     transfer,
 )
-from animate.utility import function2cofunction
+from firedrake_animate.utility import function2cofunction
 
 
 class TestClement(unittest.TestCase):

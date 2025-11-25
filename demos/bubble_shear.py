@@ -244,8 +244,8 @@ def plot_mesh(mesh, c0, c1, i, method):
 # a function which takes the original mesh and the concentration field as arguments, and
 # returns the adapted mesh. We will also define parameters for computing the metric. ::
 
-from animate.adapt import adapt
-from animate.metric import RiemannianMetric
+from firedrake_animate.adapt import adapt
+from firedrake_animate.metric import RiemannianMetric
 
 metric_params = {
     "dm_plex_metric": {

@@ -5,7 +5,7 @@ import ufl
 from firedrake.utility_meshes import UnitTriangleMesh
 from parameterized import parameterized
 
-from animate.math import construct_basis, gram_schmidt
+from firedrake_animate.math import construct_basis, gram_schmidt
 
 
 class TestOrthogonalisation(unittest.TestCase):

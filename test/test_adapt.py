@@ -14,7 +14,7 @@ from petsc4py import PETSc
 from pyop2.mpi import COMM_WORLD
 from test_setup import uniform_mesh, uniform_metric
 
-from animate.adapt import adapt
+from firedrake_animate.adapt import adapt
 
 
 def load_mesh(fname):
@@ -38,7 +38,7 @@ def try_adapt(mesh, metric, serialise=None):
     :arg mesh: mesh to be adapted
     :type mesh: :class:`firedrake.mesh.MeshGeometry`
     :arg metric: Riemannian metric to adapt with respect to
-    :type metric: :class:`animate.metric.RiemannianMetric`
+    :type metric: :class:`firedrake_animate.metric.RiemannianMetric`
     :return: mesh adapted according to the metric
     :rtype: :class:`firedrake.mesh.MeshGeometry`
     """
@@ -202,7 +202,7 @@ def test_adapt_parallel_np3(dim, serialise):
 @pytest.mark.parametrize("dim", [2, 3], ids=["mmg2d", "mmg3d"])
 def test_enforce_spd_h_min(dim):
     """
-    Tests that :meth:`animate.metric.RiemannianMetric.enforce_spd` applies minimum
+    Tests that :meth:`firedrake_animate.metric.RiemannianMetric.enforce_spd` applies minimum
     magnitudes as expected.
     """
     mesh = uniform_mesh(dim)
@@ -220,7 +220,7 @@ def test_enforce_spd_h_min(dim):
 @pytest.mark.parametrize("dim", [2, 3], ids=["mmg2d", "mmg3d"])
 def test_enforce_spd_h_max(dim):
     """
-    Tests that :meth:`animate.metric.RiemannianMetric.enforce_spd` applies maximum
+    Tests that :meth:`firedrake_animate.metric.RiemannianMetric.enforce_spd` applies maximum
     magnitudes as expected.
     """
     mesh = uniform_mesh(dim)

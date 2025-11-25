@@ -90,23 +90,23 @@ print(f"Number of elements = {uniform_mesh.num_cells()}")
 #    Number of elements = 8192
 #
 # In previous demos we have seen how to adapt a mesh using a
-# :class:`~animate.metric.RiemannianMetric` object, where we defined the metric from
+# :class:`~firedrake_animate.metric.RiemannianMetric` object, where we defined the metric from
 # analytical expressions. Such approaches may be suitable for problems in which we know
 # beforehand where fine resolution is required and where coarse resolution is
 # acceptable. A more general approach is to adapt the mesh based on the features of the
 # solution field; i.e., based on its Hessian. Animate provides several Hessian recovery
-# methods through the :meth:`animate.metric.RiemannianMetric.compute_hessian` method.
+# methods through the :meth:`firedrake_animate.metric.RiemannianMetric.compute_hessian` method.
 #
 # For example, we compute the Hessian of the above numerical solution as follows. ::
 
-from animate.metric import RiemannianMetric
+from firedrake_animate.metric import RiemannianMetric
 
 P1_ten = TensorFunctionSpace(uniform_mesh, "CG", 1)
 isotropic_metric = RiemannianMetric(P1_ten)
 isotropic_metric.compute_hessian(u_numerical)
 
 # Before adapting the mesh from the metric above, let us further modify the metric.
-# We can do this using the :meth:`~animate.metric.RiemannianMetric.set_parameters`
+# We can do this using the :meth:`~firedrake_animate.metric.RiemannianMetric.set_parameters`
 # method. We must always specify the target complexity, which will influence the number
 # of elements in the adapted mesh (i.e., the higher the target complexity, the more
 # elements in the adapted mesh). We can specify many other parameters, such as the
@@ -162,7 +162,7 @@ plot_metric(isotropic_metric, "poisson_isotropic-metric.jpg")
 #
 # Finally, let us adapt the original uniform mesh from the above-defined metric. ::
 
-from animate.adapt import adapt
+from firedrake_animate.adapt import adapt
 
 isotropic_mesh = adapt(uniform_mesh, isotropic_metric)
 

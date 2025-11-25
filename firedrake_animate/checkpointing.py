@@ -50,7 +50,7 @@ def load_checkpoint(filepath, mesh_name, metric_name, comm=firedrake.COMM_WORLD)
     :kwarg comm: MPI communicator for handling the checkpoint file
     :type comm: :class:`mpi4py.MPI.Intracom`
     :returns: the metric loaded from the checkpoint
-    :rtype: :class:`animate.metric.RiemannianMetric`
+    :rtype: :class:`firedrake_animate.metric.RiemannianMetric`
     """
     if not os.path.exists(filepath):
         raise Exception(f"Metric file does not exist! Path: {filepath}.")
@@ -79,7 +79,7 @@ def save_checkpoint(filepath, metric, metric_name=None, comm=firedrake.COMM_WORL
     :arg filepath: the path of the checkpoint file
     :type filepath: :class:`str`
     :arg metric: the metric to save to the checkpoint
-    :type metric: :class:`animate.metric.RiemannianMetric`
+    :type metric: :class:`firedrake_animate.metric.RiemannianMetric`
     :kwarg metric_name: the name under which to save the metric in the checkpoint file
     :type metric_name: :class:`str`
     :kwarg comm: MPI communicator for handling the checkpoint file

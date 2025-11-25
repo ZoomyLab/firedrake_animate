@@ -9,8 +9,8 @@ from firedrake.norms import errornorm
 from parameterized import parameterized
 from test_setup import uniform_mesh
 
-from animate.quality import QualityMeasure
-from animate.utility import function_data_sum
+from firedrake_animate.quality import QualityMeasure
+from firedrake_animate.utility import function_data_sum
 
 
 @pytest.fixture(params=[2, 3])

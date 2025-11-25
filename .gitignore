@@ -1,7 +1,7 @@
 # .gitignore
 
 # Subdirectories
-animate.egg-info/
+firedrake_animate.egg-info/
 outputs/
 plots/
 __pycache__/

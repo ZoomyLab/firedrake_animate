@@ -12,9 +12,9 @@ from firedrake.functionspace import FunctionSpace, TensorFunctionSpace
 from parameterized import parameterized
 from sensors import bowl, mesh_for_sensors
 
-from animate.math import construct_basis
-from animate.metric import RiemannianMetric
-from animate.utility import errornorm, norm
+from firedrake_animate.math import construct_basis
+from firedrake_animate.metric import RiemannianMetric
+from firedrake_animate.utility import errornorm, norm
 
 # ---------------------------
 # standard tests for pytest

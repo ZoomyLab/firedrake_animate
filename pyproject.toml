@@ -2,7 +2,7 @@
 requires = ["setuptools"]
 
 [project]
-name = "animate"
+name = "firedrake-animate"
 version = "0.2"
 authors = [
   {name = "Joseph G. Wallwork", email = "joe.wallwork@outlook.com"},
@@ -43,7 +43,7 @@ Documentation = "https://mesh-adaptation.github.io/animate/index.html"
 Repository = "https://github.com/mesh-adaptation/animate"
 
 [tool.setuptools]
-packages = ["animate"]
+packages = ["firedrake_animate"]
 
 [tool.setuptools.package-data]
 animate = ["cxx/*.cxx"]

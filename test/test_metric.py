@@ -15,8 +15,8 @@ from parameterized import parameterized
 from sensors import bowl, hyperbolic, interweaved, multiscale
 from test_setup import uniform_mesh, uniform_metric
 
-from animate.metric import P0Metric, RiemannianMetric
-from animate.utility import function_data_min
+from firedrake_animate.metric import P0Metric, RiemannianMetric
+from firedrake_animate.utility import function_data_min
 
 
 class MetricTestCase(unittest.TestCase):

@@ -4,7 +4,7 @@ from firedrake.functionspace import TensorFunctionSpace
 from firedrake.mesh import Mesh, MeshGeometry
 from firedrake.utility_meshes import CubeMesh, IntervalMesh, SquareMesh
 
-from animate.metric import RiemannianMetric
+from firedrake_animate.metric import RiemannianMetric
 
 
 def uniform_mesh(dim, n=5, length=1, recentre=False, **kwargs):

@@ -69,7 +69,7 @@ class MetricBasedAdaptor(AdaptorBase):
         :arg mesh: mesh to be adapted
         :type mesh: :class:`firedrake.mesh.MeshGeometry`
         :arg metric: metric to use for the adaptation
-        :type metric: :class:`animate.metric.RiemannianMetric`
+        :type metric: :class:`firedrake_animate.metric.RiemannianMetric`
         :kwarg name: name for the adapted mesh
         :type name: :class:`str`
         :kwarg comm: MPI communicator to use for the adapted mesh

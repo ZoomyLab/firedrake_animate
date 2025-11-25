@@ -11,7 +11,7 @@ from firedrake.utility_meshes import UnitSquareMesh, UnitTriangleMesh
 from parameterized import parameterized
 from test_setup import uniform_mesh
 
-from animate.utility import VTKFile, assemble_mass_matrix, errornorm, norm
+from firedrake_animate.utility import VTKFile, assemble_mass_matrix, errornorm, norm
 
 pointwise_norm_types = [["l1"], ["l2"], ["linf"]]
 integral_scalar_norm_types = [["L1"], ["L2"], ["L4"], ["H1"], ["HCurl"]]

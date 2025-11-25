@@ -10,8 +10,8 @@ from firedrake.functionspace import FunctionSpace, TensorFunctionSpace
 from firedrake.mesh import _generate_default_mesh_topology_name
 from test_setup import uniform_mesh
 
-from animate.checkpointing import get_checkpoint_dir, load_checkpoint, save_checkpoint
-from animate.metric import RiemannianMetric
+from firedrake_animate.checkpointing import get_checkpoint_dir, load_checkpoint, save_checkpoint
+from firedrake_animate.metric import RiemannianMetric
 
 
 class TestCheckpointing(unittest.TestCase):
